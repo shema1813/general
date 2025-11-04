@@ -1,0 +1,36 @@
+/* External CSS file (1.css) */
+
+/* Styling for <h3> — external CSS example */
+h3 {
+    color: green;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+/* Class selector */
+.myclass {
+    color: purple;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+/* ID selector */
+#myid {
+    color: orange;
+    background-color: lightyellow;
+    padding: 5px;
+    border: 2px solid orange;
+}
+
+/* Group selector (targets both h5 and p) */
+h5, p {
+    color: teal;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Optional: Add a general body style */
+body {
+    background-color: #f0f8ff;
+    font-family: Verdana, sans-serif;
+}
