@@ -1,0 +1,59 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+h1{
+    color: rgb(188, 114, 114);
+}
+
+/*attribute selector*/
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: blue;
+    background-color: white;
+    font-size: 30px;
+}
+
+/*Child selector*/
+ul > li{
+    font-weight: bold;
+}
+
+/*sibling selector*/
+h1 + p{
+    background-color: lime;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*:hover pseudo-class*/
+ul li:hover{
+color: aliceblue;
+}
+
+/* :nth-child(n) pseudo-class*/
+ul li:nth-child(3){
+    background-color: orangered;
+}
+
+/* ::before pseudo-element*/
+ul li::before{
+    content: 🚀;
+}
+
+/* ::after pseudo-element*/
+a::after{
+    content: 🌌;
+}
+
+/* ::first-letter pseudo-element*/
+p::first-letter{
+    font-size: 200%;
+    color: red;
+}
