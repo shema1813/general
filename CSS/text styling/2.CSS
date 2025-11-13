@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, red, yellow, green);
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  text-decoration: overline;
+  text-transform: capitalize;
+  font-size: 45px;
+  color: lightgreen;
+}
+
+h2 {
+  text-decoration: underline;
+  font-size: 30px;
+  color: gold;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 22px;
+  color: pink;
+}
+
+p {
+  font-size: 18px;
+  color: white;
+  
+}
+
+.intro {
+  font-size: 20px;
+  color: lightyellow;
+}
+
+ul, ol {
+  text-align: left;
+  width: 60%;
+  font-size: 18px;
+}
+
+
+
+.fancy-text {
+  color: gold;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 70%;
+  
+}
+
+/* Hover box */
+.box {
+  background-color: darkred;
+  color: white;
+  width: 200px;
+  padding: 20px;
+}
+ 
+
+
+/* Rotated title */
+#transform {
+  transform: rotate(-180deg);
+  background-color: purple;
+  color: white;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+/* Footer quote */
+.footer {
+  font-style: italic;
+  color: lightyellow;
+  margin-top: 40px;
+  font-size: 20px;
+}
