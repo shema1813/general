@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Box and float</title>
+        <style>
+            body{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: white;
+                padding: 20px;
+                line-height: 1.7;
+            }
+
+            h1, h2 {
+                text-align: center;
+                color: purple;
+            }
+
+            /* Floating boxes*/
+            .fl{
+                float: left;
+                width: 180px;
+                background: blue;
+                color: white;
+                padding: 15px;
+                margin: 10px 20px 10px 0;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px yellowgreen;
+                font-weight: bold;
+            }
+
+            .fr{
+                float: right;
+                width: 180px;
+                background: blue;
+                color: white;
+                padding: 15px;
+                margin: 10px 20px 10px 0;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px yellowgreen;
+                font-weight: bold;
+            }
+
+            /*container for the floating example*/
+            .flco{
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 10px lime;
+                max-width: 800px;
+                margin: 20px auto;
+            }
+
+            /*clear fix*/
+            .clear{
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Floating Content (non-images)</h1>
+        <div class="flaco">
+        <h2>Float left and float right Txt blocks</h2>
+
+        <div class="fl">
+            float left Content
+            <br><small>Content flows this content</small>
+        </div>
+        <div class="fr">
+            float right content
+            <br><small>content flows this content too</small>
+        </div>
+        </div>
+
+        <p>Mercury is the closest planet to the sun</p>
+
+        <div class="clear"></div>
+
+
+    </body>
+</html>
