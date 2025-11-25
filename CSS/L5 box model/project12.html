@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>Space Float Example</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0b0f26;
+            color: white;
+            padding: 20px;
+            line-height: 1.7;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #9d7dff;
+        }
+
+        /* Floating image (left) */
+        .img-left {
+            float: left;
+            width: 220px;
+            margin: 10px 20px 10px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px #6bc5ff;
+        }
+
+        /* Floating text block (right) */
+        .text-right {
+            float: right;
+            width: 200px;
+            background: #1a2347;
+            color: white;
+            padding: 15px;
+            margin: 10px 0 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px #6bc5ff;
+            font-weight: bold;
+        }
+
+        /* Container */
+        .space-box {
+            background: #11182e;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 850px;
+            margin: 20px auto;
+            box-shadow: 0px 4px 15px #4e6cff;
+        }
+
+        /* Clear floats */
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Floating Content in Space Theme</h1>
+
+    <div class="space-box">
+        <h2>Image Float + Text Float</h2>
+
+        <!-- Floating Image -->
+        <img class="img-left"
+             src="https://upload.wikimedia.org/wikipedia/commons/c/c3/NASA_Mercury_Image.jpg"
+             alt="Planet Mercury">
+
+        <!-- Floating Text Block -->
+        <div class="text-right">
+            Space Fact!
+            <br><small>Mercury orbits the Sun in just 88 days.</small>
+        </div>
+
+        <p>
+            Space is incredibly vast. Even the closest planet to Earth varies depending 
+            on orbital positions. Mercury, although small, has extreme temperature 
+            changes and no substantial atmosphere to help regulate heat. Its surface is 
+            covered with craters from billions of years of impacts.
+        </p>
+
+        <div class="clear"></div>
+    </div>
+
+</body>
+</html>
