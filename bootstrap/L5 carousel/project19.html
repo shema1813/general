@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giraffe World Carousel</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+   
+    
+    <style>
+        body {
+            background-color: #fdf6ec;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin: 30px 0;
+            color: #8b5e3c;
+            letter-spacing: 2px;
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .carousel-caption h3 {
+            font-family: 'Playfair Display', serif;
+            color: #ffe8c2;
+        }
+
+        .carousel-caption p {
+            font-size: 16px;
+        }
+
+        .carousel img {
+            height: 450px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🦒 Welcome to Giraffe World</h1>
+
+    <div class="container">
+        <div id="giraffeCarousel" class="carousel slide" data-ride="carousel">
+
+            
+            <ol class="carousel-indicators">
+                <li data-target="#giraffeCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#giraffeCarousel" data-slide-to="1"></li>
+                <li data-target="#giraffeCarousel" data-slide-to="2"></li>
+            </ol>
+
+            
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" class="d-block w-100" alt="Giraffe Safari">
+                    <div class="carousel-caption">
+                        <h3>Gentle Giants</h3>
+                        <p>Giraffes are the tallest land animals on Earth.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2" class="d-block w-100" alt="Giraffe Family">
+                    <div class="carousel-caption">
+                        <h3>Life in the Savanna</h3>
+                        <p>They live in open grasslands and African savannas.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d" class="d-block w-100" alt="Baby Giraffe">
+                    <div class="carousel-caption">
+                        <h3>Unique Beauty</h3>
+                        <p>Every giraffe has a unique pattern of spots.</p>
+                    </div>
+                </div>
+
+            </div>
+
+           
+            <a class="carousel-control-prev" href="#giraffeCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#giraffeCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
+    </div>
+
+
+</body>
+</html>
