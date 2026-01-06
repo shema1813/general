@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Intro to functions</title>
+    </head>
+    <body>
+        <button onclick="mf(5)">Execute JS function</button>
+        <h3>A function to access variables</h3>
+         <button onclick="calc()">Calculate</button>
+         <p id="d"></p>
+         <p id="d1"></p>
+
+         <h1 style="color: lime;">Function declarations</h1>
+         <p id="r"></p>
+        <script>
+            function mf(x,y){
+                if (y==undefined){
+                    y=6
+                }
+                document.write(x*y)
+            }
+
+            var b = 5 //global
+            function calc(){
+                var a = 7 //local
+                document.getElementById("d").innerHTML=a*b
+            }
+            document.getElementById("d1").innerHTML=b
+
+            //expression of a variable
+            var result = function(a,b){return a*b}
+            document.getElementById("r").innerHTML=result(5,7)
+        </script>
+    </body>
+</html>
