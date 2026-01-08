@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Intro to functions</title>
+</head>
+<body>
+
+    <button onclick="mf(5)">Multiply 5 × 6</button>
+    <p id="m1"></p>
+
+    <button onclick="mf(8,4)">Multiply 8 × 4</button>
+    <p id="m2"></p>
+
+    <h3>A function to access variables</h3>
+    <button onclick="calc()">Calculate (7 × 5)</button>
+    <p id="d"></p>
+    <p id="d1"></p>
+
+    <h3>Multiply three numbers</h3>
+    <button onclick="multi3(2,3,4)">Multiply 2 × 3 × 4</button>
+    <p id="m3"></p>
+
+    
+
+    <h1 style="color: lime;">Function expressions</h1>
+    <p id="r"></p>
+
+    <script>
+        function mf(x, y) {
+            if (y == undefined) {
+                y = 6;
+            }
+            document.getElementById("m1").innerHTML = x * y;
+            document.getElementById("m2").innerHTML = x * y;
+        }
+
+        var b = 5; // global
+        function calc() {
+            var a = 7; // local
+            document.getElementById("d").innerHTML = a * b;
+        }
+        document.getElementById("d1").innerHTML = b;
+
+        function multi3(a, b, c) {
+            document.getElementById("m3").innerHTML = a * b * c;
+        }
+
+        function multiplyInput() {
+            var x = document.getElementById("n1").value;
+            var y = document.getElementById("n2").value;
+            document.getElementById("m4").innerHTML = x * y;
+        }
+
+        // function expression
+        var result = function(a, b) {
+            return a * b;
+        }
+        document.getElementById("r").innerHTML = result(5, 7);
+    </script>
+
+</body>
+</html>
