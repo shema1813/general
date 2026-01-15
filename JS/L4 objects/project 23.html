@@ -1,0 +1,149 @@
+<html>
+<head>
+    <title>Project 23</title>
+</head>
+<body>
+
+    <h1>Objects</h1>
+
+    <p id="person"></p>
+    <p id="teacher"></p>
+    <p id="phone"></p>
+    <p id="book"></p>
+
+    <h3 id="max"></h3>
+    <h3 id="min"></h3>
+    <h3 id="sum"></h3>
+    <h3 id="avg"></h3>
+    <h3 id="factorial"></h3>
+
+    <button onclick="showDate()">Show Current Date</button>
+    <p id="date"></p>
+
+    <script>
+        
+        var person = {
+            name: "Ali",
+            age: 17,
+            country: "Pakistan",
+            info: function () {
+                return this.name + " is " + this.age + " years old and lives in " + this.country;
+            }
+        };
+        document.getElementById("person").innerHTML = person.info();
+
+        var teacher = {
+            name: "Mr. James",
+            subject: "Chemistry",
+            experience: 12
+        };
+        document.getElementById("teacher").innerHTML =
+            teacher.name + " teaches " + teacher.subject + " and has " +
+            teacher.experience + " years of experience";
+
+        
+        var phone = {
+            brand: "Samsung",
+            model: "Galaxy S23",
+            price: 180000
+        };
+        document.getElementById("phone").innerHTML =
+            "Phone: " + phone.brand + " " + phone.model + " (Rs. " + phone.price + ")";
+
+        
+        var book = {
+            title: "JavaScript Basics",
+            author: "Shema",
+            pages: 320
+        };
+        document.getElementById("book").innerHTML =
+            book.title + " by " + book.author + " (" + book.pages + " pages)";
+
+        
+        var students = [
+            { name: "Sara", marks: 85 },
+            { name: "tom", marks: 72 },
+            { name: "Ayesha", marks: 91 }
+        ];
+
+        document.write("<b>Student List:</b><br>");
+        for (var i = 0; i < students.length; i++) {
+            document.write(students[i].name + " scored " + students[i].marks + "<br>");
+        }
+
+        document.write("<br>");
+
+       
+        document.write("Square root of 81: " + Math.sqrt(81) + "<br>");
+        document.write("Power (2^5): " + Math.pow(2, 5) + "<br>");
+        document.write("Rounded value: " + Math.round(4.7) + "<br>");
+        document.write("Random number (1–100): " + Math.floor(Math.random() * 100 + 1) + "<br><br>");
+
+        
+        function findMax() {
+            var max = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        document.getElementById("max").innerHTML =
+            "Maximum: " + findMax(12, 45, 7, 89, 34);
+
+        function findMin() {
+            var min = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                if (arguments[i] < min) {
+                    min = arguments[i];
+                }
+            }
+            return min;
+        }
+        document.getElementById("min").innerHTML =
+            "Minimum: " + findMin(12, 45, 7, 89, 34);
+
+        
+        function findSum() {
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        document.getElementById("sum").innerHTML =
+            "Sum: " + findSum(10, 20, 30, 40);
+
+       
+        function findAverage() {
+            var total = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                total += arguments[i];
+            }
+            return total / arguments.length;
+        }
+        document.getElementById("avg").innerHTML =
+            "Average: " + findAverage(10, 20, 30, 40);
+
+        
+        function factorial(n) {
+            var fact = 1;
+            for (var i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+        document.getElementById("factorial").innerHTML =
+            "Factorial of 5: " + factorial(5);
+
+        
+        function showDate() {
+            document.getElementById("date").innerHTML =
+                "Current Date & Time: " + new Date();
+        }
+
+    </script>
+
+</body>
+</html>
