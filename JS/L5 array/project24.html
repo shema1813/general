@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Display</title>
+</head>
+<body>
+    <h2>Array</h2>
+
+    <script>
+        
+        var colors = ["Red", "Green", "Blue", "Yellow"];
+
+        
+        document.write("<b>Using index values:</b><br>");
+        document.write("Index 0: " + colors[0] + "<br>");
+        document.write("Index 1: " + colors[1] + "<br>");
+        document.write("Index 2: " + colors[2] + "<br>");
+        document.write("Index 3: " + colors[3] + "<br><br>");
+
+      
+        document.write("<b>Using object keys:</b><br>");
+        for (var key in colors) {
+            document.write("Key " + key + ": " + colors[key] + "<br>");
+        }
+
+       
+        document.write("<br><b>Using join():</b><br>");
+        document.write(colors.join(" | ") + "<br><br>");
+
+       
+        colors.pop();
+        document.write("<b>After pop():</b><br>");
+        document.write(colors.join(" | "));
+    </script>
+</body>
+</html>
