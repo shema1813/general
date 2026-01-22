@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>conditional statement</title>
+    </head>
+    <body>
+        <p>Click the buttin to get time based greetings</p>
+        <button onclick="timeb()">Click here</button>
+        <p id="h"></p>
+         <p id="g"></p>
+         <h1>While loop</h1>
+         <p id="w"></p>
+         <script>
+            function timeb(){
+                var greetings
+                var time = new Date().getHours()
+                if(time<10){
+                    greetings="Good morning"
+                }
+                else if(time<20){
+                    greetings="Good day"
+                }
+                else{
+                    greetings="Good evening"
+                }
+                document.getElementById("h").innerHTML="Current Hour is"+ time
+                document.getElementById("g").innerHTML=greetings
+            }
+            var text = ""
+            var i=0
+            while(i<10){
+                text += "<br> The number is" +i
+                i++
+            }
+             document.getElementById("w").innerHTML=text
+         </script>
+    </body>
+</html>
