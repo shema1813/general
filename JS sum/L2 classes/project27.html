@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Details</title>
+</head>
+<body>
+
+  <h2>Student Details</h2>
+
+  <p id="age"></p>
+  <p id="status"></p>
+  <p id="course"></p>
+
+  <script>
+    
+    class Student {
+      constructor(name, age) {
+        this.studentName = name;
+        this.studentAge = age;
+      }
+
+      showAge() {
+        return this.studentName + " is " + this.studentAge + " years old.";
+      }
+    }
+
+    
+    class CollegeStudent extends Student {
+      constructor(name, age, course) {
+        super(name, age);
+        this.course = course;
+      }
+
+      showStatus() {
+        return this.studentName + " is currently enrolled as a college student.";
+      }
+
+      
+      static showCourse(obj) {
+        return obj.studentName + " is taking the " + obj.course + " course.";
+      }
+    }
+
+    let student1 = new CollegeStudent("Carlo", 20, "Computer Science");
+
+
+    document.getElementById("age").innerHTML = student1.showAge();
+    document.getElementById("status").innerHTML = student1.showStatus();
+    document.getElementById("course").innerHTML = CollegeStudent.showCourse(student1);
+  </script>
+
+</body>
+</html>
+
+
+
