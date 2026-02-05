@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Array</title>
+</head>
+<body>
+    <h1> Array</h1>
+    <h5>Click the button to sort</h5>
+
+    <button onclick="ascending()">Ascending order</button>
+
+    <p id="order"></p>
+    <p id="pv"></p>
+
+    <script>
+        
+        var points = [100, 50, 700000, 463, 77, 1, 14, 1000, 1234];
+        document.getElementById("order").innerHTML = points;
+
+        function mu(num) {
+            return num * 5;
+        }
+
+       
+        var newpoints = points.map(mu);
+        document.getElementById("pv").innerHTML = newpoints;
+
+        function ascending() {
+            newpoints.sort(function(a, b) {
+                return a - b;
+            });
+            document.getElementById("pv").innerHTML = newpoints;
+        }
+    </script>
+</body>
+</html>
+
