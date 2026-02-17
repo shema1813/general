@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>JS in details</title>
+</head>
+<body>
+
+    <h2>Error Handling</h2>
+    <p id="err"></p>
+
+    <script>
+        var x = 900;
+        var y = 0;  // Change to 0 to create an error
+
+        try {
+            if (y === 0) {
+                throw new Error("Division by zero is not allowed!");
+            }
+
+            var result = x / y;
+            document.write("Result is: " + result);
+        }
+        catch (er) {
+            document.getElementById("err").innerHTML = "Error: " + er.message;
+        }
+        finally {
+            console.log("Program executed.");
+        }
+    </script>
+
+</body>
+</html>
+
