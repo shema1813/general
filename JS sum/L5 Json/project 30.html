@@ -1,0 +1,74 @@
+<html> 
+<head>
+    <title>Project 30</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <h2>JavaScript Async / Await</h2>
+    <p id="res"></p>
+
+    <script>
+
+        
+        function myDisplayer1(some){
+            document.getElementById("demo").innerHTML = some;
+        }
+
+       
+        function sum(a, b){
+            let result = a + b;
+            myDisplayer1(result);
+        }
+
+        
+        function checkStatus(){
+            return new Promise(function(resolve, reject){
+                let x = 0; 
+
+                setTimeout(function(){
+                    if(x == 0){
+                        resolve("OK");
+                    } else {
+                        reject("Error");
+                    }
+                }, 2000); 
+            });
+        }
+
+   
+        async function runProcess(){
+            try{
+                let value = await checkStatus(); 
+                
+             
+                document.getElementById("res").innerHTML = value;
+                sum(5, 5);
+
+            } catch(error){
+               
+                document.getElementById("res").innerHTML = error;
+                myDisplayer1(error);
+            }
+        }
+
+        
+        runProcess();
+
+
+        
+        function myDisplayer(value){
+            document.getElementById("res").innerHTML += "<br>Callback Sum: " + value;
+        }
+
+        function myCalculator(num1, num2, myCallback){
+            let result = num1 + num2;
+            myCallback(result);
+        }
+
+        myCalculator(5, 5, myDisplayer);
+
+    </script>
+
+</body>
+</html>
