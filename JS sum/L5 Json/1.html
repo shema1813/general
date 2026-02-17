@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>JSON</title>
+    </head>
+    <body>
+        <h2>Converting the object to JSON string, and sending it to the server</h2>
+        <P id="result"></P>
+
+        <h2>JS Async / Await</h2>
+        <p id="r"></p>
+        <script>
+            var m0={name:"Rane",age:15,grade:10}
+            var mjson=JSON.stringify(m0) // converts object to JSON 
+            var new0j=JSON.parse(mjson) //  converts JSON to object
+            document.getElementById("result").innerHTML=new0j.name
+
+            // Async / Await
+            async function add(a,b){
+                let response = await a+b
+                display(response)
+            }
+            function display(some){
+                document.getElementById("r").innerHTML=some
+            }
+            add(7,5)
+        </script>
+    </body>
+</html>
