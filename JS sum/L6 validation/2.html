@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>document</title>
+    </head>
+    <body>
+        <p>Enter a number and click OK</p>
+        <input type="number" min="100" max="500" id="i" required>
+        <button onclick="Myf()">OK</button>
+        <P>If the number is less than 100 or greater than 500, and error message will show</P>
+        <p id="re"></p>
+        <script>
+            function Myf(){
+                var inp = document.getElementById("i")
+                if (!inp.checkValidity()){
+                    document.getElementById("re").innerHTML=inp.validationMessage
+                }else{
+                    document.getElementById("re").innerHTML="Input is OK"
+                }
+            }
+        </script>
+    </body> 
+</html>
