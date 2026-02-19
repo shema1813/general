@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Age Verification Form</title>
+    </head>
+    <body>
+        <form name="myform" onsubmit="return validateform()">
+            Name: <input type="text" name="fname"><br><br>
+            Age: <input type="number" name="age"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <p id="message"></p>
+
+        <script>
+            function validateform() {
+                var name = document.forms["myform"]["fname"].value;
+                var age = document.forms["myform"]["age"].value;
+
+                
+                if (name == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+
+               
+                if (age == "" || isNaN(age)) {
+                    alert("Please enter a valid age");
+                    return false;
+                }
+
+               
+                if (parseInt(age) < 18) {
+                    alert("You must be at least 18 years old to proceed");
+                    return false;
+                }
+
+                
+                document.getElementById("message").innerHTML = "Welcome, " + name + "! You are " + age + " years old.";
+                return false; 
+            }
+        </script>
+    </body>
+</html>
