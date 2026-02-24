@@ -1,0 +1,113 @@
+<html>
+    <head>
+        
+<!-- Bootstrap CSS -->
+
+<link rel="stylesheet"
+
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+
+<!-- Font Awesome -->
+
+<script src="https://kit.fontawesome.com/996973c893.js"></script>
+
+<!-- Google Font -->
+
+<link
+
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+
+rel="stylesheet" />
+<title>Project</title>
+
+<style>
+    body{
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(235deg, #141e30, #243b55);
+        height : 100vh;
+        }
+
+        /*navbar styling*/
+         .navigation{
+            background: rgba(red, green, blue, alpha);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(red, green, blue, alpha);
+            padding: 15px 0;
+         }
+
+         .brand-name{
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 20px;
+            color: white;
+         }
+
+         .navigation-link{
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.3s ease;
+            position: relative;
+         }
+
+         /* underline hover animation*/
+         .navigation-link::after{
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: -5px;
+            background: #00f2ff;
+            transition: 0.4s;
+         }
+
+         .navigation-link:hover{
+            color: #00f2ff;
+         }
+         .navigation-link:hover::after{
+            width: 100%;
+         }
+
+         /*center content (optional visual balance)*/
+         .center-content{
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            opacity: 0.6;
+         }
+</style>
+    </head>
+    <body>
+        <div class="container-fluid navigation">
+            <div class="row align-items-center">
+                <!--logo-->
+                <div class="col-6 d-flex align-items-center pl-4">
+                    <i class="fas fa-code fa-2x text-into"></i>
+                    <span class="brand-name pl-2">Codingal</span>
+                </div>
+
+                <!--menu-->
+                <div class="col-6">
+                    <div class="row justify-content-end text-center">
+                        <div class="col-3">
+                            <a href="#" class="navigation-link">Home</a>
+                        </div>
+                         <div class="col-3">
+                            <a href="#" class="navigation-link">About</a>
+                        </div>
+                         <div class="col-3">
+                            <a href="#" class="navigation-link">project</a>
+                        </div>
+                         <div class="col-3">
+                            <a href="#" class="navigation-link">conntact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
