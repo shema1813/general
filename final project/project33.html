@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/996973c893.js"></script>
+
+<title>Blue Reef Restaurant</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    font-family:'Poppins', sans-serif;
+    background:linear-gradient(180deg,#001f3f,#003566,#005f99,#0077b6);
+    color:white;
+}
+
+/* NAVBAR */
+.navbar{
+    background:rgba(0, 10, 25, 0.9);
+}
+.navbar-brand{
+    font-weight:800;
+    color:#00c3ff !important;
+    letter-spacing:2px;
+}
+.nav-link{
+    color:white !important;
+    margin-right:15px;
+    transition:0.3s;
+}
+.nav-link:hover{
+    color:#00c3ff !important;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:linear-gradient(rgba(0,0,40,0.6),rgba(0,0,40,0.6)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size:cover;
+    background-position:center;
+}
+.hero h1{
+    font-size:3.5rem;
+    font-weight:800;
+}
+.hero span{
+    color:#00c3ff;
+}
+.hero p{
+    margin-top:20px;
+    font-size:1.2rem;
+}
+
+/* BUTTON */
+.btn-shark{
+    margin-top:25px;
+    padding:12px 35px;
+    border-radius:50px;
+    background:linear-gradient(45deg,#00c3ff,#0077b6);
+    border:none;
+    font-weight:600;
+    color:white;
+    transition:0.4s;
+}
+.btn-shark:hover{
+    transform:scale(1.1);
+    box-shadow:0 10px 25px rgba(0,195,255,0.6);
+}
+
+/* ABOUT */
+.about-section{
+    padding:80px 0;
+}
+.glass{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    transition:0.4s;
+}
+.glass:hover{
+    transform:translateY(-10px);
+}
+.about-img{
+    width:100%;
+    border-radius:20px;
+}
+
+/* MENU */
+.menu{
+    padding:80px 0;
+}
+.menu-card{
+    background:rgba(255,255,255,0.08);
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+}
+.menu-card img{
+    height:220px;
+    object-fit:cover;
+}
+.menu-card:hover{
+    transform:translateY(-15px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+.price{
+    color:#00c3ff;
+    font-weight:700;
+    font-size:1.2rem;
+}
+
+/* FOOTER */
+footer{
+    padding:30px;
+    text-align:center;
+    background:#000c1a;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#"><i class="fas fa-fish"></i> Blue Reef Shark</a>
+        <div>
+            <a class="nav-link d-inline" href="#">Home</a>
+            <a class="nav-link d-inline" href="#">About</a>
+            <a class="nav-link d-inline" href="#">Menu</a>
+            <a class="nav-link d-inline" href="#">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div>
+        <h1>Welcome to <span>Blue Reef restaurant</span></h1>
+        <p>Bold Flavors,Deep Ocean Freshness and Shark-Level Taste</p>
+        <button class="btn btn-shark">Dive Into the Menu</button>
+    </div>
+</section>
+
+<!-- About -->
+<section class="about-section container">
+    <div class="row align-items-center glass">
+        <div class="col-md-6">
+            <img src="https://images.unsplash.com/photo-1559847844-d721426d6edc" class="about-img">
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+            <h2 class="text-info">About Us</h2>
+            <h3 class="mb-4">Fresh food</h3>
+            <p>Blue Reef  Restaurant delivers powerful ocean flavors inspired by the beauty of the sea.</p>
+            <p>We specialize in premium seafood prepared with creativity.</p>
+            <button class="btn btn-shark">Reserve a Table</button>
+        </div>
+    </div>
+</section>
+
+<!-- Menu -->
+<section class="menu container text-center">
+    <h2 class="mb-5 text-info">Top  Dishes</h2>
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+            <div class="card menu-card">
+                <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb36" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Grilled Mako Steak</h5>
+                    <p class="card-text">Savory grilled steak with ocean spices.</p>
+                    <p class="price">$24.99</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card menu-card">
+                <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Reef Seafood Pasta</h5>
+                    <p class="card-text">Shrimp, mussels & calamari in creamy sauce.</p>
+                    <p class="price">$19.99</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card menu-card">
+                <img src="https://images.unsplash.com/photo-1604908176997-431a8b0f3a73" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Shark Bite Burger</h5>
+                    <p class="card-text">Crispy seafood burger with spicy sauce.</p>
+                    <p class="price">$16.99</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Blue Reef Restaurant</p>
+</footer>
+
+</body>
+</html>
