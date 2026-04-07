@@ -3,7 +3,7 @@
     <title>Bank App</title>
 
     <style>
-    body {
+        body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #1e3c72, #2a5298);
             margin: 0;
@@ -22,31 +22,16 @@
         h2 {
             text-align: center;
             color: #2a5298;
-            margin-bottom: 5px;
-        }
-
-        .subtitle {
-            text-align: center;
-            font-size: 12px;
-            color: #777;
-            margin-bottom: 15px;
         }
 
         .balance {
             background: #2a5298;
             color: white;
-            padding: 18px;
-            border-radius: 12px;
-            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
             text-align: center;
             font-size: 20px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        label {
-            font-weight: bold;
-            font-size: 14px;
+            margin-bottom: 15px;
         }
 
         select, input {
@@ -56,19 +41,11 @@
             margin-bottom: 12px;
             border-radius: 8px;
             border: 1px solid #ccc;
-            transition: 0.2s;
-        }
-
-        select:focus, input:focus {
-            border-color: #2a5298;
-            box-shadow: 0 0 5px rgba(42,82,152,0.3);
-            outline: none;
         }
 
         .buttons {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 15px;
         }
 
         button {
@@ -77,95 +54,109 @@
             border: none;
             border-radius: 8px;
             cursor: pointer;
+            color: white;
             font-weight: bold;
-            transition: 0.2s;
         }
 
         .income {
             background: #28a745;
-            color: white;
-        }
-
-        .income:hover {
-            background: #218838;
         }
 
         .expense {
             background: #dc3545;
-            color: white;
-        }
-
-        .expense:hover {
-            background: #c82333;
-        }
-
-        h3 {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
         }
 
         ul {
             list-style: none;
             padding: 0;
-            max-height: 150px;
-            overflow-y: auto;
         }
 
         li {
-            background: #f9f9f9;
+            background: #f1f1f1;
             padding: 10px;
             border-radius: 8px;
             margin-bottom: 8px;
-            display: flex;
-            justify-content: space-between;
-            font-size: 14px;
-        }
-
-        .income-item {
-            border-left: 5px solid #28a745;
-        }
-
-        .expense-item {
-            border-left: 5px solid #dc3545;
-        }
-
-        
-        .footer {
-            text-align: center;
-            font-size: 11px;
-            color: #aaa;
-            margin-top: 10px;
         }
     </style>
 </head>
+
 <body>
 
-<h2>My Bank Tracker</h2>
+<div class="container">
+    <h2>My Bank Tracker</h2>
 
-<h3>Balance: KES 0</h3>
+    <div class="balance">
+        Balance: KES <span id="balance">0</span>
+    </div>
 
-<label>Choose transaction:</label><br>
-<select id="transaction">
-    <option value="Salary">Salary</option>
-    <option value="Business">Business</option>
-    <option value="Gift">Gift</option>
-    <option value="Food">Food</option>
-    <option value="Transport">Transport</option>
-    <option value="Rent">Rent</option>
-    <option value="Airtime">Airtime</option>
-</select><br><br>
+    <label>Description:</label>
+    <input type="text" id="desc" placeholder="e.g. Salary, Food">
 
-<input type="number" placeholder="Amount"><br><br>
+    <label>Choose transaction:</label>
+    <select id="transaction">
+        <option value="Salary">Salary</option>
+        <option value="Business">Business</option>
+        <option value="Gift">Gift</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Rent">Rent</option>
+        <option value="Airtime">Airtime</option>
+    </select>
 
-<button>Add Income</button>
-<button>Add Expense</button>
+    <input type="number" id="amount" placeholder="Amount">
 
-<h3>Transactions</h3>
-<ul>
-   
-</ul>
+    <div class="buttons">
+        <button class="income" onclick="addIncome()">Add Income</button>
+        <button class="expense" onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <h3>Transactions</h3>
+    <ul id="list"></ul>
+</div>
+
+<script>
+    let balance = 0;
+
+    function addTransaction(type) {
+        const descInput = document.getElementById("desc");
+        const amountInput = document.getElementById("amount");
+        const select = document.getElementById("transaction");
+
+        let desc = descInput.value || select.value;
+        let amount = Number(amountInput.value);
+
+        if (!amount || amount <= 0) {
+            alert("Enter a valid amount");
+            return;
+        }
+
+        const list = document.getElementById("list");
+        const item = document.createElement("li");
+
+        if (type === "income") {
+            balance += amount;
+            item.textContent = desc + " +KES " + amount;
+        } else {
+            balance -= amount;
+            item.textContent = desc + " -KES " + amount;
+        }
+
+        list.appendChild(item);
+        document.getElementById("balance").textContent = balance;
+
+        // clear inputs
+        amountInput.value = "";
+        descInput.value = "";
+    }
+
+    function addIncome() {
+        addTransaction("income");
+    }
+
+    function addExpense() {
+        addTransaction("expense");
+    }
+</script>
 
 </body>
 </html>

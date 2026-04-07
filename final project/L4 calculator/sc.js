@@ -25,7 +25,7 @@ function formatNumber(num){
     return Number(num).toLocaleString("en");
 }
 
-function reverseNumber(num){
+function reverseNumberFormat(num){
     if (num === "") return "";
     return Number(num.replace(/,/g, ""))
 }
