@@ -10,7 +10,7 @@ class ArtGallery:
         self.artworks.append(artwork)
         print(f"'{artwork}' added to the gallery.")
 
-    #
+   
     def remove_artwork(self, artwork):
         if artwork in self.artworks:
             self.artworks.remove(artwork)
@@ -18,6 +18,7 @@ class ArtGallery:
         else:
             print("Artwork not found.")
 
+    
     def display_artworks(self):
         print(f"\nArtworks in {self.gallery_name}:")
         if not self.artworks:
