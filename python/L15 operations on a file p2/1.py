@@ -1,4 +1,3 @@
-# NOTEBOOK MANGER
 import os
 
 #Part 1
